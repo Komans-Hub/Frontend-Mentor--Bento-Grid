@@ -1,0 +1,269 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --purple: hsl(256, 67%, 59%);
+  --purple-light: hsl(254, 88%, 90%);
+  --yellow: hsl(39, 100%, 71%);
+  --yellow-light: hsl(31, 66%, 93%);
+  --radius: 16px;
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+main.container {
+  width: min(1200px, 95vw);
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+main.container > section {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+main.container section figure {
+  margin: 0;
+}
+
+main.container section figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+main.container h1,
+main.container h3 {
+  margin: 0 0 0.75rem;
+}
+
+main.container p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+main.container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0.65rem 0;
+}
+
+main.container .container-1 {
+  background: linear-gradient(160deg, var(--purple) 0%, #6476ff 100%);
+  border: 1px solid hsl(256, 67%, 59%);
+  padding: 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+main.container .container-1 span{
+  color: var(--yellow);
+}
+main.container .container-1 .star_image{
+  width: 150px;
+  height: 20px;
+  margin: auto;
+}
+main.container .container-2 figcaption{
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+main.container .container-3{
+  background: linear-gradient(160deg, var(--yellow) 0%, #ffd266 100%);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+main.container .container-3 h3{
+  padding: 1rem 1rem 0 1rem;
+}
+main.container .container-3 img{
+  display: block;
+  height: auto;
+  width: 50%;
+  margin-bottom: 0px;
+  margin-left: 1rem;
+}
+main.container .container-4{
+  background: linear-gradient(160deg, var(--purple-light) 0%, #e0e4ff 100%);
+  text-align: center;
+}
+main.container .container-4 h3{
+  font-weight: 700; 
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  padding: .5rem 1rem;
+}
+main.container .container-4 figcaption{
+  padding: 1rem 1.5rem;
+  font-weight: 500; 
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--text);
+}
+main.container .container-5{
+  background: linear-gradient(160deg, var(--purple) 0%);
+  text-align: center;
+}
+main.container .container-5 img{
+  margin: .5rem auto;
+  width: 80%;
+}
+main.container .container-5 figcaption{
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  font-weight: 700; 
+  font-size: 2rem;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--card);
+  
+}
+main.container .container-6{
+  background: linear-gradient(160deg, var(--card) 0%);
+}
+main.container .container-6 h3{
+  font-weight: 700; 
+  font-size: 3rem;
+}
+main.container .container-6 p{
+  font-weight: 500; 
+  color: var(--black);
+  font-size: 1.1rem;
+  padding-bottom: .7rem;
+}
+main.container .container-6 img{
+  width: 50%;
+}
+main.container .container-7{
+  background: linear-gradient(160deg, var(--yellow-light) 0%, #fff1d6 100%);
+}
+main.container .container-7 h3{
+  font-weight: 700; 
+  font-size: 2rem;
+  padding: .5rem 1rem;
+}
+main.container .container-7 img{
+  padding: 1rem 1.5rem;
+  width: 80%;
+}
+main.container .container-8 {
+  background: linear-gradient(160deg, var(--yellow) 0%);
+}
+main.container .container-8 h3{
+  font-weight: 700;   
+  font-size: 1.85rem;
+  letter-spacing: 0;
+  padding: .3rem 1rem;  
+}
+main.container .container-8 img{
+  padding: 1rem 1.5rem;
+  width: 80%;
+  margin-bottom: .1rem;
+}
+
+
+@media (min-width: 768px) {
+  main.container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  main.container {
+    max-width: 1050px; 
+    margin: 3rem auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 1.5rem;
+    grid-template-areas:
+      "quicker hero hero schedule"
+      "quicker multiple maintain schedule"
+      "write stats grow grow"; 
+  }
+
+  .container-1 { grid-area: hero; }
+  .container-2 { grid-area: multiple; }
+  .container-3 { grid-area: maintain; }
+  .container-4 { grid-area: schedule; }
+  .container-5 { grid-area: grow; }
+  .container-6 { grid-area: stats; }
+  .container-7 { grid-area: quicker; }
+  .container-8 { grid-area: write; }
+
+  main.container > section {
+    padding: 1.5rem;
+  }
+  .container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-1 h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .container-3 {
+    padding-bottom: 0; 
+    overflow: hidden;
+  } 
+  .container-3 img {
+    width: 120%;
+    margin-left: -10%;
+    margin-top: auto; 
+  }
+  main.container-1 .container-5 {
+    display: flex;
+    flex-direction: row; 
+    width: 50%;
+  } 
+  .container-5 img {
+    width: 50%;
+    margin: 0;
+  }
+  .container-5 figcaption {
+    width: 45%;
+    text-align: left;
+    padding: 0;
+  }
+  .container-8,
+  .container-6 {
+    height: 50%;
+  }
+}
+
+
+

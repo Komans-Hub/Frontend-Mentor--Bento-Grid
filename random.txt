@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <main class="container" aria-label="Bento grid features">
+        <section class="container-1" aria-label="hero">
+            <h1>Social Media <span>10x</span> Faster with AI</h1>
+            <figure>
+                <img src="illustration-five-stars.webp" alt="five stars rating" class="star_image">
+                <figcaption>Over 4,000 5-star reviews</figcaption>
+            </figure>
+        </section>
+
+        <section class="container-2" aria-label="multi-account management">
+            <figure>
+                <img src="illustration-multiple-platforms.webp" alt="multiple platforms illustration">
+                <figcaption>Manage multiple accounts and platforms.</figcaption>
+            </figure>
+        </section>
+
+        <section class="container-3" aria-label="posting schedule">
+            <h3>Maintain a consistent posting schedule.</h3>
+            <figure>
+                <img src="illustration-consistent-schedule.webp" alt="consistent schedule illustration">
+            </figure>
+        </section>
+
+        <section class="container-4" aria-label="schedule optimization">
+            <h3>Schedule to social media.</h3>
+            <figure>
+                <img src="illustration-schedule-posts.webp" alt="schedule posts illustration">
+                <figcaption>Optimize post timings to publish content at the perfect time for your audience.</figcaption>
+            </figure>
+        </section>
+
+        <section class="container-5" aria-label="grow followers">
+            <figure>
+                <img src="illustration-grow-followers.webp" alt="grow followers illustration">
+                <figcaption>Grow followers with non-stop content.</figcaption>
+            </figure>
+        </section>
+
+        <section class="container-6" aria-label="audience growth stats">
+            <h3>&gt;56%</h3>
+            <p>faster audience growth</p>
+            <figure>
+                <img src="illustration-audience-growth.webp" alt="audience growth illustration">
+            </figure>
+        </section>
+
+        <section class="container-7" aria-label="quick content creation">
+            <h3>Create and schedule content <span>quicker.</span></h3>
+            <figure>
+                <img src="illustration-create-post.webp" alt="create post illustration">
+            </figure>
+        </section>
+
+        <section class="container-8" aria-label="AI content writing">
+            <h3>Write your content using AI.</h3>
+            <figure>
+                <img src="illustration-ai-content.webp" alt="AI content illustration">
+            </figure>
+        </section>
+    </main>
+</body>
+</html>
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --purple: hsl(256, 67%, 59%);
+  --purple-light: hsl(254, 88%, 90%);
+  --yellow: hsl(39, 100%, 71%);
+  --yellow-light: hsl(31, 66%, 93%);
+  --radius: 16px;
+  --black: hsl(0, 0%, 7%);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+main.container {
+  width: min(1200px, 95vw);
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+main.container > section {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+main.container section figure {
+  margin: 0;
+}
+
+main.container section figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+main.container h1,
+main.container h3 {
+  margin: 0 0 0.75rem;
+}
+
+main.container p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+main.container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0.65rem 0;
+}
+
+main.container .container-1 {
+  background: linear-gradient(160deg, var(--purple) 0%, #6476ff 100%);
+  border: 1px solid hsl(256, 67%, 59%);
+  padding: 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+main.container .container-1 span{
+  color: var(--yellow);
+}
+main.container .container-1 .star_image{
+  width: 150px;
+  height: 20px;
+  margin: auto;
+}
+main.container .container-2 figcaption{
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+main.container .container-3{
+  background: linear-gradient(160deg, var(--yellow) 0%, #ffd266 100%);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+main.container .container-3 h3{
+  padding: 1rem 1rem 0 1rem;
+}
+main.container .container-3 img{
+  display: block;
+  height: auto;
+  width: 50%;
+  margin-bottom: 0px;
+  margin-left: 1rem;
+}
+main.container .container-4{
+  background: linear-gradient(160deg, var(--purple-light) 0%, #e0e4ff 100%);
+  text-align: center;
+}
+main.container .container-4 h3{
+  font-weight: 700; 
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  padding: .5rem 1rem;
+}
+main.container .container-4 figcaption{
+  padding: 1rem 1.5rem;
+  font-weight: 500; 
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--text);
+}
+main.container .container-5{
+  background: linear-gradient(160deg, var(--purple) 0%);
+  text-align: center;
+}
+main.container .container-5 img{
+  margin: .5rem auto;
+  width: 80%;
+}
+main.container .container-5 figcaption{
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  font-weight: 700; 
+  font-size: 2rem;
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--card);
+  
+}
+main.container .container-6{
+  background: linear-gradient(160deg, var(--card) 0%);
+}
+main.container .container-6 h3{
+  font-weight: 700; 
+  font-size: 3rem;
+}
+main.container .container-6 p{
+  font-weight: 500; 
+  color: var(--black);
+  font-size: 1.1rem;
+  padding-bottom: .7rem;
+}
+main.container .container-6 img{
+  width: 50%;
+}
+main.container .container-7{
+  background: linear-gradient(160deg, var(--yellow-light) 0%, #fff1d6 100%);
+}
+main.container .container-7 h3{
+  font-weight: 700; 
+  font-size: 2rem;
+  padding: .5rem 1rem;
+}
+main.container .container-7 img{
+  padding: 1rem 1.5rem;
+  width: 80%;
+}
+main.container .container-8 {
+  background: linear-gradient(160deg, var(--yellow) 0%);
+}
+main.container .container-8 h3{
+  font-weight: 700;   
+  font-size: 1.85rem;
+  letter-spacing: 0;
+  padding: .3rem 1rem;  
+}
+main.container .container-8 img{
+  padding: 1rem 1.5rem;
+  width: 80%;
+  margin-bottom: .1rem;
+}
+
+@media (min-width: 768px) {
+  main.container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  main.container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .container-1 {
+    grid-column: 2/4;
+    grid-row: span 2;
+    order: 2;
+
+  }
+  .container-2 {
+    grid-column: span 1;
+    order: 3;
+  }
+  .container-3 {
+    grid-column: span 1;
+    order: 4;
+  }
+  .container-4 {
+    grid-column: span 1;
+    order: 5;
+  }
+  .container-5 {
+    grid-column: span 2;
+    grid-row: span 1;
+    order: 6;
+  }
+  .container-6 {
+    grid-column: span 1;
+    order: 7;
+  }
+  .container-7 {
+    grid-column: span 1;
+    order: 1;
+  }
+  .container-8 {
+    grid-column: span 1;
+    order: 8;
+  }
+}
+
